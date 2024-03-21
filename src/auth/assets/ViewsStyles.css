@@ -1,0 +1,103 @@
+
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.login_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 2em;
+}
+
+.login_right h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    color: #213547;
+}
+
+.login_right p {
+    margin: 0;
+    color: #213547;
+}
+
+.auth_login {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4em;
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background: linear-gradient(217deg, #222, black) padding-box,
+                linear-gradient(217deg, rgb(14, 14, 14), #222) border-box;
+    animation: fadeIn 1s
+}
+
+.auth_form_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.auth_form_container h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    background: -webkit-linear-gradient(217deg, #55bfec, #47a58c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.auth_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.auth_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.auth_buttons span {
+    cursor: pointer;
+    color: #c86dac;
+    text-align: center;
+    transition: color 0.25s;
+    background: -webkit-linear-gradient(217deg, #55bfec, #47a58c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &::before {
+        content: '👻';
+        margin-right: 0.5em;
+    }
+    &:hover {
+        animation: aura 1s infinite alternate;
+    }
+}

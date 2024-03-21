@@ -1,0 +1,40 @@
+.app_header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    transition: all ease-in-out 0.25s;
+}
+  
+.app_header_logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: auto;
+    transition: all ease-in-out 0.25s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.app_header_logo span {
+    font-weight: 400;
+    cursor: pointer;
+    color: #c86dac;
+    text-align: center;
+    transition: color 0.25s;
+    background: -webkit-linear-gradient(217deg, #55bfec, #47a58c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &::before {
+        content: '👻';
+        margin-right: 0.5em;
+    }
+    &:hover {
+        animation: aura 1s infinite alternate;
+    }
+}

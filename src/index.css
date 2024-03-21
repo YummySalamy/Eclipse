@@ -1,0 +1,132 @@
+:root {
+  font-family: "Anek Telugu", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #55bfec;
+  text-decoration: inherit;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+a:hover {
+  color: #47a58c;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid transparent;
+  padding: 0.6em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #47a58c;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+input {
+  border-radius: 20px;
+  border: 1px solid #d3d3d3;
+  padding: 0.6em;
+  margin: 0.5em 0;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  transition: all ease-in-out 0.25s;
+  &:focus {
+    border-color: #47a58c;
+  }
+}
+
+
+input::placeholder {
+  color: #d3d3d3;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+
+table {
+  width: 100%;
+  margin: 1em 0;
+  transition: all ease-in-out 0.25s;
+  border: 1px solid #777777;
+  border-radius: 20px;
+}
+
+th {
+  background-color: #1a1a1a;
+  color: #55bfec;
+  font-weight: 500;
+  padding: 0.5em;
+  text-align: left;
+}
+
+th:first-child {
+  border-top-left-radius: 20px;
+}
+
+th:last-child {
+  border-top-right-radius: 20px;
+}
+
+td {
+  padding: 0.5em;
+}
+
+tr:nth-child(even) {
+  background-color: #1a1a1a;
+}
+
+tr:hover {
+  background-color: #2a2a2a;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

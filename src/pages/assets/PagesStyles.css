@@ -1,0 +1,112 @@
+@keyframes aura {
+    from {
+        text-shadow: 0 0 2em #47a58c;
+    }
+    to {
+        text-shadow: 0 0 2em #4fa8ce;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s;
+}
+
+.home p {
+    margin: 0;
+}
+
+.home span {
+    cursor: pointer;
+    color: #c86dac;
+    text-align: center;
+    transition: color 0.25s;
+    background: -webkit-linear-gradient(217deg, #55bfec, #47a58c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &::before {
+        content: '👻';
+        margin-right: 0.5em;
+    }
+    &:hover {
+        animation: aura 1s infinite alternate;
+    }
+}
+
+.home b {
+    color: #47a58c;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s;
+}
+
+.about p {
+    margin: 0;
+}
+
+.about span {
+    color: #47a58c;
+    text-align: center;
+    margin-top: 1em;
+    transition: color 0.25s;
+    background: -webkit-linear-gradient(217deg, #55bfec, #47a58c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover {
+        animation: aura 1s infinite alternate;
+    }
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s;
+}
+
+.contact p {
+    margin: 0;
+}
+
+.contact h2 {
+    margin: 0;
+    margin-bottom: 1em;
+    color:#c86dac
+}
+
+.contact-item {
+    display: grid;
+    align-items: center;
+    transition: all ease-in-out 0.25s;
+    cursor: pointer;
+}
+
+.contact-item:hover {
+    transform: scale(1.05);
+}

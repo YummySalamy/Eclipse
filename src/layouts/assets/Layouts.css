@@ -1,0 +1,150 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    border-right: 1px solid #777777;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1000;
+    transition: width 0.3s ease;
+    animation: slideToRight 0.5s;
+}
+
+.sidebar_hidden {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    border-right: 1px solid #e9ecef;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1000;
+    transition: width 0.3s ease;
+    animation: slideToLeft 0.5s forwards;
+}
+
+.sidebar_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0;
+    background-color: #55bfec;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.sidebar_toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    cursor: pointer;
+    transition: all ease-in-out 0.25s;
+    border-bottom: 1px solid #777777;
+}
+
+.sidebar_toggle:hover {
+    background-color: #1c1c1c;
+    color: #55bfec;
+}
+å
+.sidebar_toggle_icon {
+    font-size: 1.5em;
+    &:hover {
+        transform: rotate(180deg);
+    }
+}
+
+.sidebar_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 0;
+    list-style: none;
+    animation: fadeIn 0.5s;
+}
+
+.sidebar_menu_hidden {
+    animation: fadeOut 0.5s forwards;
+}
+
+.sidebar_menu_items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+}
+
+.sidebar_menu_item {
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 1em;
+    gap: 1em;
+    width: 100%;
+    cursor: pointer;
+    transition: all ease-in-out 0.25s;
+    list-style: none;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.sidebar_menu_item:hover {
+    background-color: #1c1c1c;
+    color: #47a58c;
+    border-color: #47a58c;
+    transform: scale(1.05);
+}
+
+.sidebar_menu_icon {
+    margin-right: 0.5em;
+}
+
+.sidebar_menu_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 1em;
+    gap: 1em;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes slideToLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+        display: none;
+    }
+}
+
+@keyframes slideToRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
