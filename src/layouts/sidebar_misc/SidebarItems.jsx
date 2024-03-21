@@ -21,6 +21,7 @@ const MenuItems = [
     },
     {
         title: 'My Business',
+        url: '/app/business',
         icon: <FaShop />,
     },
     {

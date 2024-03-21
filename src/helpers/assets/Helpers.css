@@ -3,9 +3,14 @@
     top: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 1em;
     transition: all ease-in-out 0.25s;
+    position: fixed;
+    width: 100%;
+    padding-block: 0.5em;
+    z-index: 999;
+    justify-content: center;
+
 }
   
 .app_header_logo {
@@ -14,7 +19,6 @@
     align-items: center;
     font-size: 1.5em;
     cursor: pointer;
-    margin-left: auto;
     transition: all ease-in-out 0.25s;
     &:hover {
         transform: scale(1.1);

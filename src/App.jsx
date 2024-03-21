@@ -4,6 +4,7 @@ import FullLayout from './layouts/FullLayout'
 import AppLayout from './layouts/AppLayout';
 import Inventory from './main_app/Inventory';
 import Dashboard from './main_app/Dashboard';
+import Business from './main_app/Business';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -49,6 +50,10 @@ function App() {
           <Route
             path={"/app"}
             element={<AppLayout children={<Dashboard/>}/>}
+          />
+          <Route
+            path={"/app/business"}
+            element={<AppLayout children={<Business/>}/>}
           />
           {/* <Route
             path="/app/contacts"

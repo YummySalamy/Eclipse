@@ -10,7 +10,7 @@ const Table = ({dataSource, columns, input}) => {
     console.log('dataSource', dataSource);
 
     return (
-        <div>
+        <div className="table">
             { input &&
                 <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search by name" />
             }
