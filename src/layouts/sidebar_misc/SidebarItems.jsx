@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { RiDashboard2Line } from "react-icons/ri";
 import { LuCodesandbox } from "react-icons/lu";
@@ -52,6 +52,20 @@ const MenuItems = [
 ];
 
 const SidebarItems = () => {
+
+    const [active, setActive] = useState('');
+    const currentPath = window.location.pathname;
+
+    useEffect(() => {
+        MenuItems.map((item) => {
+            if (currentPath === item.url) {
+                setActive(item.title);
+            }
+            return active;
+        });
+    }
+    , [currentPath, active]);
+
     return (
         <div className="sidebar_menu">
             <ul className="sidebar_menu_items">
@@ -63,7 +77,12 @@ const SidebarItems = () => {
                             </li>
                         );
                     } else return (
-                        <Link key={index} className="sidebar_menu_item" to={item.url}>
+                        <Link 
+                            key={index} 
+                            className={active === item.title ? 'sidebar_menu_item_active' : 'sidebar_menu_item'}
+                            to={item.url} 
+                            onClick={() => setActive(item.title)}
+                        > 
                                 <div className="sidebar_menu_icon">
                                 {item.icon}
                                 </div>

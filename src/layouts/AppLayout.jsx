@@ -6,9 +6,14 @@ const AppLayout = ({ children }) => {
     return (
         <div className="app-layout">
 
-            <AppHeader />
+            <div className="app-layout-sidebar">
             <Sidebar />
-            {children}
+            </div>
+            <div className="app-layout-content">
+                <AppHeader />
+                {children}
+            </div>
+            
         </div>
     );
 };

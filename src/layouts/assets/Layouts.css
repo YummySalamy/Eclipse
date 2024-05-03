@@ -1,3 +1,22 @@
+.app-layout {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+}
+
+.app-layout-sidebar {
+    flex: 0 0 auto;
+    width: 250px;
+}
+
+.app-layout-content {
+    flex: 1 1 auto;
+    overflow: auto;
+}
+
+
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -100,6 +119,22 @@
     border-color: #47a58c;
     transform: scale(1.05);
 }
+
+.sidebar_menu_item_active {
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 1em;
+    gap: 1em;
+    width: 100%;
+    cursor: pointer;
+    transition: all ease-in-out 0.25s;
+    list-style: none;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: #47a58c;
+    scale: 1.05;
+}
+
 
 .sidebar_menu_icon {
     margin-right: 0.5em;
